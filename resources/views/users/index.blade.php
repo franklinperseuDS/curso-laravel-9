@@ -19,6 +19,7 @@
             <th scope="col" class="px-6 py-3">E-mail</th>
             <th scope="col" class="px-6 py-3">Editar</th>
             <th scope="col" class="px-6 py-3">Detalhes</th>
+            <th scope="col" class="px-6 py-3">Commentarios </th>
         </tr>
     </thead>
 
@@ -32,10 +33,13 @@
                  {{ $user->email}} 
             </td>
             <td class="px-6 py-4">
-                 <a class="bg-blue-200 rounded text-white px-3 py-1.5" href="{{ route('users.edit', $user->id)}}">Editar </a> 
+                 <a class="bg-green-200 rounded border-blue-200 text-white px-3 py-1.5" href="{{ route('users.edit', $user->id)}}">Editar </a> 
             </td>
             <td class="px-6 py-4">
                 <a class="bg-red-400 rounded text-white px-3 py-1.5" href="{{ route('users.show', $user->id)}}">Detalhes </a>
+            </td>
+            <td class="px-6 py-4">
+                <a class="bg-blue-200 rounded border-blue-200 text-white px-3 py-1.5" href="{{ route('comments.index', $user->id)}}">Anotações ({{$user->comments->count()}} ) </a>
             </td>
         </tr>
     @endforeach
