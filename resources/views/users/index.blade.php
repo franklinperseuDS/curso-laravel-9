@@ -27,6 +27,11 @@
     @foreach ($users as $user)
         <tr class="bg-white border-b px-6 py-4">
             <td class="px-6 py-4">
+                @if ($user->image)
+                <img src='{{ url("storage/{$user->image}")}}' alt="" class="object-cover w-20 ">
+                @else
+                <img src='{{ url("images/ubt.ico")}}' alt="" class="object-cover w-20 ">
+                @endif
                  {{ $user->name}} 
             </td>
             <td class="px-6 py-4">
