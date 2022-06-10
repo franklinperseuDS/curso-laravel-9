@@ -10,6 +10,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->group(function () {
 
 Route::get('/users/{id}/comments/create', [CommentController::class, 'create'])->name('comments.create');
 Route::get('/users/{user}/comments/{id}', [CommentController::class, 'edit'])->name('comments.edit');
@@ -24,4 +25,6 @@ Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/create',[UserController::class, 'create'])->name('users.create');
 Route::post('users',[UserController::class, 'store'])->name('users.store');
 Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
+});
 
+require __DIR__.'/auth.php';

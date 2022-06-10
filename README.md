@@ -1,9 +1,9 @@
 
 # Setup Docker Para Projetos Laravel 9 com PHP 8
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
+Curso feito pelo - [Especializati](https://academy.especializati.com.br)
 
 ### Passo a passo
-Clone Repositório
+Clone Repositório Original
 ```sh
 git clone https://github.com/especializati/setup-docker-laravel.git laravel9
 ```
@@ -78,5 +78,8 @@ php artisan key:generate
 ```
 
 
+Gerar autenticação seguindo o manual do Laravel
+[https://laravel.com/docs/9.x/starter-kits](https://laravel.com/docs/9.x/starter-kits)
+
 Acesse o projeto
-[http://localhost:8180](http://localhost:8180)
+[http://localhost:8989](http://localhost:8989)
