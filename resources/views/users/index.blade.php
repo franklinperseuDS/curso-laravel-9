@@ -9,8 +9,8 @@
 </h1>
 
 <form action="{{ route('users.index') }}" method="get">
-    <input type="text" name="search" placeholder="Pesquisar">
-    <button>Pesquisar</button>
+    <input class="bg-gray-700 rounded text-white px-3 py-1.5" type="text" name="search" placeholder="Pesquisar">
+    <button class="bg-purple-700 rounded text-white px-3 py-1.5" >Pesquisar</button>
 </form>
 <table class="min-w-full text-left leading-normal shadow-md rounded">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
@@ -32,10 +32,10 @@
                  {{ $user->email}} 
             </td>
             <td class="px-6 py-4">
-                 <a class="bg-yellow-700 rounded text-white px-3 py-1.5" href="{{ route('users.edit', $user->id)}}">Editar </a> 
+                 <a class="bg-blue-200 rounded text-white px-3 py-1.5" href="{{ route('users.edit', $user->id)}}">Editar </a> 
             </td>
             <td class="px-6 py-4">
-                <a class="bg-red-700 rounded text-white px-3 py-1.5" href="{{ route('users.show', $user->id)}}">Detalhes </a>
+                <a class="bg-red-400 rounded text-white px-3 py-1.5" href="{{ route('users.show', $user->id)}}">Detalhes </a>
             </td>
         </tr>
     @endforeach
